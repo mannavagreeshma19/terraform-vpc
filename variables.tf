@@ -1,7 +1,6 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
 }
 
 variable "ami_id" {
@@ -10,14 +9,23 @@ variable "ami_id" {
   default     = "ami-0df8c184d5f6ae949" 
 }
 
-variable "vpc_cidr" {
-  description = "CIDR block for VPC"
-  type        = string
-  default     = "192.128.118.0/24"
+variable "vpc_a" {
+  description = "user defined vpc block a"
+  type        = number
+}
+
+variable "vpc_b" {
+  description = "user defined vpc block b"
+  type        = number
 }
 
 variable "subnet_cidr" {
   description = "CIDR block for Subnet"
   type        = string
-  default     = "192.128.118.0/28"
+}
+
+variable "instance_type" {
+  description = "Instance type for the EC2 instance"
+  type        = string
+  default     = "t2.micro"
 }

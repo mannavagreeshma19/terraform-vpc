@@ -4,6 +4,6 @@ terraform {
   backend "s3" {
     bucket="main-bucket0"
     key="my_state/terraform.tfstate"
-    region= "us-east-1"
+    region= data.aws_region.current.name
   }
 }

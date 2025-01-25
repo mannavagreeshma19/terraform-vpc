@@ -1,6 +1,6 @@
 resource "aws_instance" "main_instance"{
     ami= var.ami_id
-    instance_type = "t2.micro"
+    instance_type = var.instance_type
 
     subnet_id = aws_subnet.main_subnet.id
     tags={
