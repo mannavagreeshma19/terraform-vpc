@@ -1,7 +1,6 @@
-data "aws_region" "current" {}
 
 provider "aws" {
-  region = data.aws_region.current.name
+  region = "us-east-1"
 }
 
 
